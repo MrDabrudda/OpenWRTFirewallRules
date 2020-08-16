@@ -87,7 +87,7 @@ iptables -t mangle -A PREROUTING -s 10.0.0.0/8 -j DROP
 iptables -t mangle -A PREROUTING -s 0.0.0.0/8 -j DROP 
 iptables -t mangle -A PREROUTING -s 240.0.0.0/5 -j DROP 
 iptables -t mangle -A PREROUTING -s 127.0.0.0/8 ! -i lo -j DROP
-###iptables -t mangle -A PREROUTING -s 192.168.0.0/13 -j DROP 
+###iptables -t mangle -A PREROUTING -s 192.168.0.0/16 -j DROP 
 
 ###Allow established packets
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
