@@ -87,7 +87,7 @@ iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 
 ###Block spoofed packets ###
 ###Comment out the rule that matches your network IP scope or you will lock yourself out of the router###
-iptables -t mangle -A PREROUTING -s 224.0.0.0/3 -j DROP 
+#iptables -t mangle -A PREROUTING -s 224.0.0.0/3 -j DROP 
 iptables -t mangle -A PREROUTING -s 169.254.0.0/16 -j DROP 
 iptables -t mangle -A PREROUTING -s 172.16.0.0/12 -j DROP 
 iptables -t mangle -A PREROUTING -s 10.0.0.0/8 -j DROP 
